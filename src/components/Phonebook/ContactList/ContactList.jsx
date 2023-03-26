@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
 
 const ContactList = ({ contacts, deleteContact, filter }) => {
-  const shownContacts = contacts.filter(person => person.name.includes(filter));
+  const shownContacts = contacts.filter(person =>
+    person.name.toLowerCase().includes(filter.toLowerCase())
+  );
   return (
     <ul>
       {shownContacts.map(contact => {
