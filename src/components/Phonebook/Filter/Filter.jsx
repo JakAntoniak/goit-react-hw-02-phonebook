@@ -1,11 +1,12 @@
-import css from '../ContactForm/Style.module.css';
+import css from './Style.module.css';
 import PropTypes from 'prop-types';
 
 const Filter = ({ handleFilterUpdate }) => {
   return (
     <div className={css.filter}>
-      <label htmlFor="filter-input">Find contacts by name</label>
+      <label>Find contacts by name</label>
       <input
+        className={css['filter-input']}
         id="filter-input"
         type="text"
         name="name"

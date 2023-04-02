@@ -60,10 +60,9 @@ class Phonebook extends Component {
 
   handleFilterUpdate = event => {
     event.preventDefault();
-    // @ts-ignore
+
     const newFilterValue = document.querySelector('#filter-input').value;
 
-    console.log(newFilterValue);
     this.setState(() => ({
       filter: newFilterValue,
     }));

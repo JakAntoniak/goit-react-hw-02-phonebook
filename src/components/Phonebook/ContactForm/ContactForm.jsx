@@ -1,4 +1,4 @@
-import css from '../ContactForm/Style.module.css';
+import css from './Style.module.css';
 import PropTypes from 'prop-types';
 
 const ContactForm = ({ addContact }) => {
@@ -22,7 +22,7 @@ const ContactForm = ({ addContact }) => {
         title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
         required
       />
-      <button type="submit" onClick={addContact}>
+      <button className={css.button} type="submit" onClick={addContact}>
         Add contact
       </button>
     </form>
